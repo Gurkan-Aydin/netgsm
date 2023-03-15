@@ -1,0 +1,25 @@
+version: '3'
+services:
+  ldap:
+    image: osixia/openldap:1.5.0
+    container_name: my_ldap_server
+    environment:
+      - LDAP_ORGANISATION=gurkan
+      - LDAP_DOMAIN=example.com
+      - LDAP_ADMIN_PASSWORD=admin
+      - LDAP_CONFIG_PASSWORD=admin
+      - LDAP_READONLY_USER=true
+      - LDAP_READONLY_USER_USERNAME=admin
+      - LDAP_READONLY_USER_PASSWORD=admin
+    volumes:
+      - ./ldap_data:/var/lib/ldap
+    ports:
+      - 389:389
+    networks:
+      - ldap_network
+
+volumes:
+  ldap_data:
+
+networks:
+  ldap_network:
