@@ -6,7 +6,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class NetGsmApplicationTests {
 
+
     @Test
     void contextLoads() {
+
     }
 }

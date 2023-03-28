@@ -1,4 +1,4 @@
-package com.example.netgsm;
+package com.example.netgsm.model;
 
 import lombok.Data;
 
